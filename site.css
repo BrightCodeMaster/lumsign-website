@@ -74,30 +74,7 @@ nav {
   color: var(--accent);
 }
 
-.hero {
-  position: relative;
-  height: 420px;        /* ✅ 固定高度 */
-  min-height: unset;   /* ✅ 取消最小高度 */
-  display: flex;
-  align-items: center;
-  color: var(--white);
- background-size: cover;
-background-position: center 35%;
 
-  overflow: hidden;
-}
-
-
-.hero::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(90deg, rgba(0,51,102,0.9) 0%, rgba(0,51,102,0.4) 100%);
-  z-index: 1;
-}
 
 .hero-content {
   position: relative;
@@ -486,11 +463,14 @@ section {
 .image-slider {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;   /* ✅ 关键：固定比例 */
+  max-width: 520px;      /* ✅ 关键：限制最大宽度 */
+  aspect-ratio: 4 / 3;
+  margin: 0 auto;        /* ✅ 居中，像产品图 */
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 12px;
   background: #000;
 }
+
 
 
 
