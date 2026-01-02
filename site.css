@@ -487,6 +487,34 @@ section {
 .image-slider img.active {
   opacity: 1;
 }
+/* ===== Product Feature 左图右文布局 ===== */
+
+.product-feature {
+  background: var(--light-gray);
+  padding: 80px 0;
+}
+
+.product-feature-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 520px) 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.product-text {
+  max-width: 520px;
+}
+
+/* 手机端自动变上下 */
+@media (max-width: 768px) {
+  .product-feature-inner {
+    grid-template-columns: 1fr;
+  }
+}
 
 
 
