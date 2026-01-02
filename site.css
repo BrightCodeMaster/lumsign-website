@@ -77,8 +77,7 @@ nav {
 .hero {
   position: relative;
   height: 80vh;
-  min-height: 500px;
-  display: flex;
+ display: flex;
   align-items: center;
   color: var(--white);
   background-size: cover;
@@ -484,11 +483,27 @@ section {
 .image-slider {
   position: relative;
   width: 100%;
-  height: 100%;
-  min-height: 280px;
+  aspect-ratio: 16 / 9;   /* 关键：锁定比例 */
   overflow: hidden;
   border-radius: 8px;
+  background: #000;
 }
+
+.image-slider img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* 关键：裁切而不是拉伸 */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.image-slider img.active {
+  opacity: 1;
+}
+
+
 
 .image-slider img {
   position: absolute;
