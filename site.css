@@ -221,22 +221,7 @@ section {
   margin-bottom: 10px;
 }
 
-.product-feature {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-  background: var(--light-gray);
-  padding: 40px;
-  border-radius: 12px;
-  margin-top: 40px;
-}
 
-@media (max-width: 768px) {
-  .product-feature {
-    grid-template-columns: 1fr;
-  }
-}
 
 .stats {
   background: var(--primary);
