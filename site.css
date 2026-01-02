@@ -483,10 +483,12 @@ section {
 .image-slider {
   position: relative;
   width: 100%;
-  height: 320px;      /* ✅ 固定高度 */
+  aspect-ratio: 4 / 3;   /* ✅ 关键：固定比例 */
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 10px;
+  background: #000;
 }
+
 
 
 .image-slider img {
@@ -514,9 +516,4 @@ section {
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
-
-.image-slider img.active {
-  opacity: 1;
-}
-
 
