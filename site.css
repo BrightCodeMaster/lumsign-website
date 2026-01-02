@@ -483,11 +483,11 @@ section {
 .image-slider {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;   /* 关键：锁定比例 */
+  height: 320px;      /* ✅ 固定高度 */
   overflow: hidden;
   border-radius: 8px;
-  background: #000;
 }
+
 
 .image-slider img {
   position: absolute;
