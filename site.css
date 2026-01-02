@@ -81,8 +81,9 @@ nav {
   display: flex;
   align-items: center;
   color: var(--white);
-  background-size: cover;
-  background-position: center;
+ background-size: cover;
+background-position: center 35%;
+
   overflow: hidden;
 }
 
