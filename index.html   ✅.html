@@ -185,6 +185,17 @@ All electrical work performed by a Licensed Electrical Contractor.
         </div>
     </footer>
     <script type="module" src="main.js"></script>
+    <script>
+  const slides = document.querySelectorAll('.image-slider .slide');
+  let current = 0;
+
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 4000);
+</script>
+
 </body>
 </html><!-- force rebuild 2025-12-26 -->
 
