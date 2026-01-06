@@ -608,5 +608,49 @@ section {
   color: #555;
 }
 
+/* =========================
+   Channel Letters Grid Fix
+   ========================= */
+
+.channel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.channel-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.channel-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* 🔴 关键：给图片“一个确定的高度” */
+.channel-card img {
+  width: 100%;
+  height: 220px;           /* ← 就是这行救命 */
+  object-fit: cover;
+  display: block;
+  background: #f2f2f2;
+}
+
+.channel-card h3 {
+  font-size: 18px;
+  margin: 16px 16px 6px;
+}
+
+.channel-card p {
+  font-size: 14px;
+  margin: 0 16px 18px;
+  color: #555;
+}
 
 
